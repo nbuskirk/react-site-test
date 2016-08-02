@@ -1,3 +1,11 @@
+/* 
+Filename: main.jsx 
+Route Path: null 
+Author: Nathan Buskirk
+Email: nbuskirk@gmail.com
+Description: Main component for site. This is the top-most parent, children get rendered under this.
+*/
+
 import React from 'react'
 import {render} from 'react-dom'
 import { Link } from 'react-router'

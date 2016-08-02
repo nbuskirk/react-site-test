@@ -1,3 +1,12 @@
+/* 
+Filename: footer.jsx 
+Route Path: null
+Author: Nathan Buskirk
+Email: nbuskirk@gmail.com
+Description: Site-wide footer component.
+Component Location: layouts/main.jsx
+*/
+
 import React from 'react'
 import {render} from 'react-dom'
 import { Link } from 'react-router'
