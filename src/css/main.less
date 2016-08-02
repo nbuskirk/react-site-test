@@ -6,15 +6,24 @@ Email: nbuskirk@gmail.com
 Description: Main stylesheet for application
 */
 
-ul {
-	margin:0 !important;
-	padding:0;
-	&.striped li {
-		list-style:none;
-		padding:10px;
-	}
-	&.striped li:nth-child(odd) {
-		background:#eee;
-	}
+/***************
+	Variables
+****************/
+
+@active_color: white;
+
+/*************** 
+	Layout 
+****************/
+
+.content {
+	margin-bottom:20px;
 }
 
+/************** 
+   Typography 
+***************/
+
+nav ul.nav li a.active {
+	color: @active_color;
+}

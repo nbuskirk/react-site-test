@@ -16,6 +16,9 @@ import MainLayout from './layouts/main.jsx'
 import Home from './layouts/home.jsx'
 import Projects from './layouts/projects.jsx'
 
+/* Styles? */
+import styles from '../src/css/main.less'
+
 /* Routes */
 render((
 	<Router history={hashHistory} >

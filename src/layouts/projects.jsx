@@ -12,9 +12,7 @@ import {render} from 'react-dom'
 export default class MyComponent extends React.Component {
 	render() {
 	    return (
-	    	<ul className="striped">
-				<li>project</li>	    		
-	    	</ul>
+	    	<span>/projects</span>
 	    )
   	}
 }
