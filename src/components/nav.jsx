@@ -8,14 +8,12 @@ export default class Navigation extends React.Component {
     	<nav className="navbar navbar-inverse">
 	    	<div className="container-fluid">
 	    		<div className="collapse navbar-collapse">
-		    	<ul className="nav navbar-nav">
-			    	<li><Link to="/" activeClass="active">Home</Link></li>
-			    	<li><Link to="/projects" activeClass="active">Breakdowns</Link></li>
-			    	<li><Link to="/projects" activeClass="active">My Tools</Link></li>
-			    	<li><Link to="/projects" activeClass="active">Submissions</Link></li>
-			    	<li><Link to="/projects" activeClass="active">Auditions</Link></li>
-			    	<li><Link to="/projects" activeClass="active">Services</Link></li>
-		    	</ul>
+			    	<ul className="nav navbar-nav">
+				    	<li><Link to="/" activeClass="active">Home</Link></li>
+				    	<li><Link to="/about" activeClass="active">About</Link></li>
+				    	<li><Link to="/code" activeClass="active">Code</Link></li>
+				    	<li><Link to="/lab" activeClass="active">Lab</Link></li>
+			    	</ul>
 		    	</div>
 	    	</div>
     	</nav>

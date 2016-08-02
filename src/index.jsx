@@ -3,9 +3,8 @@ import { Router, Route, Link, hashHistory } from 'react-router'
 import { render } from 'react-dom'
 
 import MainLayout from './layouts/main.jsx'
-import Home from './home.jsx'
-import Projects from './projects.jsx'
-import  './css/main.less'
+import Home from './layouts/home.jsx'
+import Projects from './layouts/projects.jsx'
 
 /* Routes */
 render((
