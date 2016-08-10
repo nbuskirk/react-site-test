@@ -14,7 +14,9 @@ import { render } from 'react-dom'
 /* Pages / Layouts */
 import MainLayout from './layouts/main.jsx'
 import Home from './layouts/home.jsx'
-import Projects from './layouts/projects.jsx'
+
+/* Components */
+import Radial from './components/radial.jsx'
 
 /* Styles? */
 import styles from '../src/css/main.less'
@@ -24,7 +26,7 @@ render((
 	<Router history={hashHistory} >
 		<Route component={MainLayout} >
 			<Route path="/" component={Home} />
-			<Route path="projects" component={Projects} />
+			<Route path="radial" component={Radial} />
 		</Route>
 	</Router>
 ), document.getElementById('app-root'));
