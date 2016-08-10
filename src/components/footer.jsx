@@ -14,7 +14,7 @@ import { Link } from 'react-router'
 export default class Footer extends React.Component {
   constructor(props){
   	super(props)
-  	this.componentName = 'react radial component'
+  	this.componentName = 'react component experiments'
   }
   render() {
     return (

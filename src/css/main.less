@@ -23,6 +23,23 @@ Description: Main stylesheet for application
 /* Sizes */
 @navsize: 12px;
 
+
+/****************
+	animation!
+****************/
+@keyframes spin {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:(360deg);
+	}
+}
+.spin {
+	animation-name: spin;
+	animation-duration: 3s;
+}
+
 /*************** 
 	Layout 
 ****************/
@@ -36,15 +53,17 @@ body {
 }
 
 .app-name {
-	color:@iconColor;
+	color:@navHighlight;
 	padding:15px 0;
+	font-size:20px;
 	&:after {
-		color: @highlight;
+		color: @navHighlightColor;
 		padding:10px 0;
 		font-size:12px;
+		font-weight:900;
 		display: block;
 		content: attr(data-app-name);
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Roboto', sans-serif;
 	};
 }
 
@@ -56,7 +75,7 @@ p {
 	color:white;
 }
 * {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 /************************
@@ -81,21 +100,44 @@ nav.navbar-inverse {
 	background-color:@navi;
 	text-transform:uppercase;
 }
-
-div#dynamic-container{width:400px; height:400px; background-color: lightgoldenrodyellow; position:relative; border: 1px solid black;}
-div#innerCircle{width: 380px; height: 380px; position: absolute; left: 10px; top:10px; background-color: lightcoral; border-radius:190px; -moz-border-radius: 190px; -webkit-border-radius: 190px;}           
-div#marker{width: 10px; height:10px; background: black; position:absolute; left:195px; cursor: crosshair;
-                        -moz-transform:rotate(45deg);
-                        -moz-transform-origin:5px 200px;
-                        
-                        transform:rotate(45deg);
-                        transform-origin:5px 200px;                          
-
-                        -ms-transform:rotate(45deg);
-                        -ms-transform-origin:5px 200px;                                
-                        
-                        -webkit-transform:rotate(45deg);
-                        -webkit-transform-origin:5px 200px;                       
-            
-                        z-index:17;
-            } 
+div.radial-container {
+	width:400px;
+	height:400px;
+	border:1px dotted @navHighlight;
+	margin:auto;
+	background: @panel;
+	position:relative;
+	.value {
+		color: @navHighlightColor;
+		bottom:10px;
+		right:10px;
+		position:absolute;
+	}
+}
+div.radial-circle {
+	width: 380px;
+	height: 380px;
+	position:absolute;
+	top:10px;
+	left:10px;
+	background-color:@navHighlight;
+	border-radius:190px;
+	-webkit-border-radius:190px;
+	-moz-border-radius:190px;
+}
+div.radial-handle {
+	width:10px;
+	height:10px;
+	background:white;
+	left:195px;
+	cursor:pointer;
+	-webkit-transform:rotate(0deg);
+    -webkit-transform-origin:5px 200px;
+    -moz-transform:rotate(0deg);
+    -moz-transform-origin:5px 200px;
+    -ms-transform:rotate(0deg);
+    -ms-transform-origin:5px 200px;
+    transform:rotate(0deg);
+    transform-origin:5px 200px; 
+    position:relative;                       
+}
