@@ -16,9 +16,6 @@ export default class RadialHandle extends React.Component {
 		this.state = {
 			dragging: false
 		}
-		this.mouseDown = this.mouseDown.bind(this);
-		this.mouseUp = this.mouseUp.bind(this);
-		this.mouseMove = this.mouseMove.bind(this);
 	}	
 	componentDidUpdate(props, state) {
     	if (this.state.dragging && !state.dragging) {
@@ -28,9 +25,9 @@ export default class RadialHandle extends React.Component {
       		window.removeEventListener('mousemove', this.mouseMove)
       		window.removeEventListener('mouseup', this.mouseUp)
     	}
-    	document.getElementById('radial-value').innerHTML = Math.round(this.state.rotation,2)
+    	document.getElementById('radial-value').innerHTML = Math.round(this.state.rotation*100)/100;
   	}
-  	mouseMove(e){
+ 	mouseMove = (e) => {
   		if (!this.state.dragging) return
    		var offsetSelector = document.getElementById('radial-container');		
 		var xCoordinate = e.pageX;
@@ -43,19 +40,22 @@ export default class RadialHandle extends React.Component {
 			rotation: theta
 		})
   	}
-	mouseDown(e) {
+	mouseDown = (e) => {
 		if(e.button!==0) return
 	    this.setState({ dragging: true })
 	}
-	mouseUp(e) {
+	mouseUp = (e) => {
     	this.setState({ dragging: false })
   	}
 	render() {
 		var ctrans = 'rotate('+this.state.rotation+'deg)'
 		var styles = {
-			WebkitTransform: ctrans
+			WebkitTransform: ctrans,
+			transform: ctrans,
+			msTransform: ctrans,
+			
 		}
-		return <div style={styles} className="radial-handle" ref='handle' onMouseDown={this.mouseDown} />
+		return <div style={styles} className="radial-handle" onMouseDown={this.mouseDown} />
 	}
 }
 
