@@ -32,12 +32,11 @@ Description: Main stylesheet for application
 		transform:rotate(0deg);
 	}
 	to {
-		transform:(360deg);
+		transform:rotate(360deg);
 	}
 }
 .spin {
-	animation-name: spin;
-	animation-duration: 3s;
+	animation: spin 5s infinite;
 }
 
 /*************** 
@@ -101,8 +100,6 @@ nav.navbar-inverse {
 	text-transform:uppercase;
 }
 div.radial-container {
-	width:400px;
-	height:400px;
 	border:1px dotted @navHighlight;
 	margin:auto;
 	background: @panel;
@@ -114,22 +111,14 @@ div.radial-container {
 		position:absolute;
 	}
 }
-div.radial-circle {
-	width: 380px;
-	height: 380px;
+div.radial-circle { 
 	position:absolute;
-	top:10px;
-	left:10px;
-	background-color:@navHighlight;
-	border-radius:190px;
-	-webkit-border-radius:190px;
-	-moz-border-radius:190px;
+	background-color: rgba(43,48,59,0.75);
 }
 div.radial-handle {
 	width:10px;
 	height:10px;
-	background:white;
-	left:195px;
+	background:rgba(255,255,255,0.75);
 	cursor:pointer;
 	-webkit-transform:rotate(0deg);
     -webkit-transform-origin:5px 200px;
@@ -139,5 +128,6 @@ div.radial-handle {
     -ms-transform-origin:5px 200px;
     transform:rotate(0deg);
     transform-origin:5px 200px; 
-    position:relative;                       
+    position:relative;
+
 }

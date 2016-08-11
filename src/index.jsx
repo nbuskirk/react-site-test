@@ -26,7 +26,6 @@ render((
 	<Router history={hashHistory} >
 		<Route component={MainLayout} >
 			<Route path="/" component={Home} />
-			<Route path="radial" component={Radial} />
 		</Route>
 	</Router>
 ), document.getElementById('app-root'));

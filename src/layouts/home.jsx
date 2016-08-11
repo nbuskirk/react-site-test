@@ -8,11 +8,12 @@ Description: Homepage layout/template for the '/' route
 
 import React from 'react'
 import {render} from 'react-dom'
+import Radial from '../components/radial.jsx'
 
 export default class Home extends React.Component {
   render() {
     return (
-    	<p>Home page, no content here yet :/</p>
+    	<Radial />
     )
   }
 }

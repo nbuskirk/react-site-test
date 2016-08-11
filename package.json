@@ -8,8 +8,7 @@
     "build": "webpack -d",
     "start": "npm run serve | npm run dev",
     "serve": "./node_modules/.bin/http-server -p 8080",
-    "dev": "webpack-dev-server -d --progress --colors --port 8090",
-    "deploy": "cd dist && scp * root@nbuskirk.com:/var/www/lab.nbuskirk.com/radial"	
+    "dev": "webpack-dev-server -d --progress --colors --port 8090"
   },
   "author": "Nathan Buskirk",
   "license": "ISC",

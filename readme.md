@@ -26,5 +26,5 @@ Copy /dist to server, enjoy.
 
 Example
 --
-Coming soon..
+http://lab.nbuskirk.com/radial
 </pre>
