@@ -8,7 +8,7 @@ Component Location: components/radial.jsx
 */
 
 /*
-	TODO: a lot, but mainly add ranges.
+	TODO: Prop handling, see src/layouts/home.jsx
 */
 
 import React from 'react'
@@ -50,14 +50,13 @@ export default class RadialHandle extends React.Component {
   	*/
  	mouseMove = (e) => {
   		if (!this.state.dragging) return
-   		const parent = document.getElementById('radial-container');		
+   		const parent = document.querySelector('#radial-container');		
 		let mouseX = e.pageX;
 		let mouseY = e.pageY;
 		let x = mouseX - parent.offsetLeft - parent.offsetWidth/2;
 		let y = -1*(mouseY - parent.offsetTop - parent.offsetHeight/2);
 		let rotationOffset = (this.props.defaultProps.circleWidth/4)-this.props.defaultProps.handleSize/2;
 		let angle = (this.props.defaultProps.circleWidth/2)-this.props.defaultProps.handleSize;
-		console.log(angle/2);
 		let rotation = (angle/2)-(Math.atan2(y,x)*(angle/Math.PI)); 		
 		this.setState({
 			rotation: rotation
